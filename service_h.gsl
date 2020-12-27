@@ -1,0 +1,27 @@
+.template 1
+.echo "Generating $(name).h"
+.output "generated/$(name).h"
+.ignorecase = 0
+.serviceName = name
+#include <iostream>
+
+namespace $(serviceName) {
+
+.for function
+.functionName = name
+    $(return) $(name)(
+.max = count(param)
+.count = 0
+.for param
+.   if count < max - 1
+        $(type) $(name),
+.   else
+        $(type) $(name)
+.   endif
+.count = count + 1
+.endfor
+    );
+
+.endfor
+}
+.endtemplate

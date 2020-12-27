@@ -1,0 +1,33 @@
+.template 1
+.echo "Generating $(name).cpp"
+.output "generated/$(name).cpp"
+.ignorecase = 0
+.serviceName = name
+#include <iostream>
+
+#include "$(name).h"
+
+namespace $(serviceName) {
+
+.for function
+.functionName = name
+    $(return) $(name)(
+.max = count(param)
+.count = 0
+.   for param
+.       if count < max - 1
+        $(type) $(name),
+.       else
+        $(type) $(name)
+.       endif
+.count = count + 1
+.endfor
+    ) {
+        std::cout << "TODO; Implement your $(functionName)" << std::endl;
+        return false;
+    }
+
+.endfor
+}
+
+.endtemplate

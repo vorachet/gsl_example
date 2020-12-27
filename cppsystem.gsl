@@ -1,0 +1,8 @@
+.template 0
+include "cmake.gsl"
+for service
+    include "main.gsl"
+    include "service_cpp.gsl"
+    include "service_h.gsl"
+endfor 
+.endtemplate

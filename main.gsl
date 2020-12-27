@@ -1,0 +1,39 @@
+.template 1
+.echo "Generating ex_$(name).cpp"
+.output "generated/ex_$(name).cpp"
+.ignorecase = 0
+.serviceName = name
+#include <iostream>
+
+#include "$(serviceName).h"
+
+int main(int argc, char const *argv[])
+{
+
+.   for function
+.   funcName=name
+.   count = 0
+.   for param
+    $(type) $(funcName)_var$(count) = "";
+.   count = count + 1
+.   endfor
+.   endfor
+
+.   for function
+.   funcName=name
+.   max = count(param)
+.   count = 0
+    $(return) $(serviceName)_$(name)_result = $(serviceName)::$(name) (
+.       for param
+.       if count < max - 1
+        $(funcName)_var$(count),
+.       else
+        $(funcName)_var$(count)
+.       endif
+.       count = count + 1
+.       endfor
+    );
+.   endfor
+    return 0;
+}
+.endtemplate

@@ -1,0 +1,15 @@
+.template 1
+.echo "Generating CMakeLists.txt"
+.output "generated/CMakeLists.txt"
+cmake_minimum_required(VERSION 3.10)
+project(services)
+
+set(CMAKE_CXX_STANDARD 17)
+
+.for service
+add_executable(ex_$(name) $(name).cpp ex_$(name).cpp)
+target_link_libraries(ex_$(name))
+
+.endfor
+
+.endtemplate
