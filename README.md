@@ -8,6 +8,21 @@ GSL specification can be found here https://imatix-legacy.github.io/gslgen/gsldo
 
 ## Demo
 
+The GSL application concept for the demo
+```
+ (cppsystem.xml)      (cppsystem.gsl, cmake,gsl, main,gsl,
+                           service_cpp.gsl, service_h.gsl)
+       XML ------ 1..* -- GSL template 
+        |
+        1
+        |
+        |
+        |
+  GSL command line ------ * -- output text file 
+                            (CMakeLists.txt, ex_serv1.cpp, ex_serv2.cpp
+                              serv1.cpp, serv1.h, serv2.cpp, serv2.h) 
+        
+```
 ### GSL command line program
 You will have to install the GSL command line program. GSL installation guide can be found here https://github.com/imatix/gsl 
 
