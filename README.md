@@ -100,6 +100,6 @@ GSL can be one of your productive software engineering tools. GSL has developed 
 </concept>
 ```
 
-As an MDE learner who uses more than one code generation tool, the following notes may be useful if you are going to fix the issues and don't mind using alternative tools differnt approach. Eclipse Epsilon (https://www.eclipse.org/epsilon) The Epsilon has features to satsify the issues. Issue-1 can be satisfied by https://www.eclipse.org/epsilon/doc/egl/#merge-engine. Issue-2 can be satisfied by the Eclipse Flexmi https://www.eclipse.org/epsilon/doc/flexmi/
+As an MDE learner who uses more than one code generation tool, the following notes may be useful. If you are going to fix above issues and don't mind using alternative tools. Eclipse Epsilon (https://www.eclipse.org/epsilon) The Epsilon has features to satsify the issues. Issue-1 can be satisfied by https://www.eclipse.org/epsilon/doc/egl/#merge-engine. Issue-2 can be satisfied by the Eclipse Flexmi https://www.eclipse.org/epsilon/doc/flexmi/
 
 I very much like a shell based environment and often perform MDE tasks with shell scripts. I developed `mdeshell`, a bash shell script based modeling environment that facilitates the definition of XML-based EMF metamodels/models and the execution of Model-2-Text transformation based on Model-Driven Engineering system implemented by the Eclipse Emfatic and the Epsilon Flexmi/EGL/EGX. Find more detail here https://github.com/vorachet/mdeshell  
